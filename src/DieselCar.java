@@ -1,5 +1,6 @@
 public class DieselCar extends AFuelCar {
-    boolean particleFilter;
+
+    private boolean particleFilter;
 
     DieselCar(int kmPrLitre, boolean particleFilter, String registrationNumber, String make, String model, int numberOfDoors) {
         super(kmPrLitre, registrationNumber, make, model, numberOfDoors);
@@ -15,22 +16,22 @@ public class DieselCar extends AFuelCar {
     }
 
     public int getRegistrationFee() {
+        int km = getKmPrLitre();
         int fee = 0;
-        if (kmPrLitre > 20 && kmPrLitre < 50) {
+        if (km > 20 && km < 50) {
             fee = 130;
-        } else if (kmPrLitre > 15 && kmPrLitre < 20) {
+        } else if (km > 15 && km < 20) {
             fee =  1390;
-        } else if (kmPrLitre > 10 && kmPrLitre < 15) {
+        } else if (km > 10 && km < 15) {
             fee =  1850;
-        } else if (kmPrLitre > 5 && kmPrLitre < 10) {
+        } else if (km > 5 && km < 10) {
             fee =  2770;
-        } else if (kmPrLitre < 5) {
+        } else if (km < 5) {
             fee =  15260;
         }
         if (!particleFilter) {
             fee += 1000;
         }
-
         return fee;
     }
 

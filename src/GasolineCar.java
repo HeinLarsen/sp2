@@ -9,15 +9,16 @@ public class GasolineCar extends AFuelCar {
     }
 
     public int getRegistrationFee() {
-        if (kmPrLitre > 20 && kmPrLitre < 50) {
+        int km = getKmPrLitre();
+        if (km > 20 && km < 50) {
             return 330;
-        } else if (kmPrLitre > 15 && kmPrLitre < 20) {
+        } else if (km > 15 && km < 20) {
             return 1050;
-        } else if (kmPrLitre > 10 && kmPrLitre < 15) {
+        } else if (km > 10 && km < 15) {
             return 2340;
-        } else if (kmPrLitre > 5 && kmPrLitre < 10) {
+        } else if (km > 5 && km < 10) {
             return 5500;
-        } else if (kmPrLitre < 5) {
+        } else if (km < 5) {
             return 10470;
         }
         return 0;

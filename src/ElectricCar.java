@@ -1,6 +1,6 @@
 public class ElectricCar extends ACar {
-    int batteryCapacityKWh;
-    int maxRangeKm;
+    private int batteryCapacityKWh;
+    private int maxRangeKm;
 
     ElectricCar(int batteryCapacityKWh, int maxRangeKm, String registrationNumber, String make, String model, int numberOfDoors) {
         super(registrationNumber, make, model, numberOfDoors);
